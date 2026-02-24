@@ -1,0 +1,425 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Assistant', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main content */
+.content {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    animation: fadeInScale 1.2s ease-out;
+    max-width: 900px;
+    padding: 2rem;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.title {
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    font-weight: bold;
+    animation: bounce 1s ease-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Ceremony card */
+.ceremony-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    padding: 3rem;
+    margin: 2rem auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: cardSlideIn 1s ease-out 0.3s backwards;
+}
+
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Drum roll */
+.drum-roll {
+    margin-bottom: 2rem;
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.announcement {
+    font-size: 2rem;
+    color: #d63447;
+    font-weight: bold;
+}
+
+/* Gift list */
+.gift-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.gift-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: popIn 0.6s ease-out backwards;
+    transition: transform 0.3s ease;
+}
+
+.gift-item:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.gift-item:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.gift-item:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+.gift-item:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.gift-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.gift-item h2 {
+    color: #6a4c93;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.gift-description {
+    color: #2c2c2c;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* Surprise message */
+.surprise-message {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    border-radius: 15px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.surprise-message p {
+    font-size: 1.8rem;
+    color: #6a4c93;
+    font-weight: bold;
+}
+
+/* Floating gifts */
+.gift-float {
+    position: fixed;
+    font-size: 3rem;
+    animation: floatGift 5s ease-in-out infinite;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+}
+
+.gift-1 {
+    top: 10%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.gift-2 {
+    top: 20%;
+    left: 8%;
+    animation-delay: 1s;
+}
+
+.gift-3 {
+    top: 50%;
+    right: 5%;
+    animation-delay: 2s;
+}
+
+.gift-4 {
+    top: 60%;
+    left: 12%;
+    animation-delay: 1.5s;
+}
+
+.gift-5 {
+    bottom: 10%;
+    right: 15%;
+    animation-delay: 2.5s;
+}
+
+.gift-6 {
+    bottom: 15%;
+    left: 10%;
+    animation-delay: 3s;
+}
+
+@keyframes floatGift {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-25px) rotate(10deg);
+    }
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-20px) rotate(-10deg);
+    }
+}
+
+/* Sparkles */
+.sparkle {
+    position: fixed;
+    font-size: 2rem;
+    animation: twinkle 2s ease-in-out infinite;
+    opacity: 0;
+}
+
+.sparkle-1 {
+    top: 15%;
+    right: 25%;
+    animation-delay: 0s;
+}
+
+.sparkle-2 {
+    top: 30%;
+    left: 20%;
+    animation-delay: 0.4s;
+}
+
+.sparkle-3 {
+    top: 50%;
+    right: 20%;
+    animation-delay: 0.8s;
+}
+
+.sparkle-4 {
+    top: 65%;
+    left: 25%;
+    animation-delay: 1.2s;
+}
+
+.sparkle-5 {
+    bottom: 20%;
+    right: 30%;
+    animation-delay: 1.6s;
+}
+
+.sparkle-6 {
+    bottom: 25%;
+    left: 35%;
+    animation-delay: 2s;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3) rotate(180deg);
+    }
+}
+
+/* Reveal button */
+.reveal-button {
+    background: linear-gradient(135deg, #d63447 0%, #ff6b6b 100%);
+    color: white;
+    border: none;
+    padding: 25px 50px;
+    font-size: 1.6rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 15px 40px rgba(214, 52, 71, 0.5);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-top: 2rem;
+    animation: pulseButton 2s ease-in-out infinite;
+    font-family: 'Assistant', 'Segoe UI', sans-serif;
+}
+
+@keyframes pulseButton {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 15px 40px rgba(214, 52, 71, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 20px 50px rgba(214, 52, 71, 0.7);
+    }
+}
+
+.reveal-button:hover {
+    transform: scale(1.15) rotate(-2deg);
+    box-shadow: 0 20px 60px rgba(214, 52, 71, 0.8);
+}
+
+.reveal-button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.2rem;
+    }
+    
+    .ceremony-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .announcement {
+        font-size: 1.5rem;
+    }
+    
+    .gift-list {
+        gap: 1rem;
+    }
+    
+    .gift-item {
+        min-width: 150px;
+        padding: 1.5rem 1rem;
+    }
+    
+    .gift-icon {
+        font-size: 3rem;
+    }
+    
+    .gift-item h2 {
+        font-size: 1.2rem;
+    }
+    
+    .gift-description {
+        font-size: 1rem;
+    }
+    
+    .surprise-message p {
+        font-size: 1.4rem;
+    }
+    
+    .reveal-button {
+        font-size: 1.2rem;
+        padding: 20px 40px;
+    }
+    
+    .gift-float {
+        font-size: 2rem;
+    }
+    
+    .sparkle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .gift-list {
+        flex-direction: column;
+    }
+    
+    .gift-item {
+        width: 100%;
+    }
+}
