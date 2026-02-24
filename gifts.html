@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your First Gift 💝</title>
+    <link rel="stylesheet" href="gifts-style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Floating hearts -->
+        <div class="heart-float heart-1">❤️</div>
+        <div class="heart-float heart-2">💕</div>
+        <div class="heart-float heart-3">💗</div>
+        <div class="heart-float heart-4">💖</div>
+        <div class="heart-float heart-5">❤️</div>
+        <div class="heart-float heart-6">💕</div>
+        
+        <!-- Main content -->
+        <div class="content">
+            <h1 class="gift-title">This is my best gift for you...</h1>
+            
+            <div class="photos-container">
+                <div class="photo-wrapper">
+                    <img src="333DF0F4-E8B2-4E54-AE1E-64A7638DDBE2.jpg" alt="Our precious family" class="family-photo">
+                </div>
+                <div class="photo-wrapper">
+                    <img src="IMG_2130.HEIC" alt="Our beautiful kids" class="family-photo">
+                </div>
+            </div>
+            
+            <h2 class="heart-message">Our Kids</h2>
+            <h2 class="heart-message">Our Heart</h2>
+            
+            <div class="big-heart">❤️</div>
+            
+            <button class="continue-button" onclick="nextGift()">
+                Continue the Journey 🎁
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function nextGift() {
+            // This will navigate to the next gift page
+            window.location.href = 'next-gift.html';
+        }
+
+        // Add fade-in animation to photos when they load
+        document.addEventListener('DOMContentLoaded', function() {
+            const photos = document.querySelectorAll('.family-photo');
+            photos.forEach((photo, index) => {
+                photo.addEventListener('load', function() {
+                    this.style.opacity = '1';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
