@@ -1,32 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Gift</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            color: white;
-        }
-        
-        .message {
-            text-align: center;
-            font-size: 2rem;
-            padding: 2rem;
-        }
-    </style>
+    <title>ברכתי אליך 💝</title>
+    <link rel="stylesheet" href="blessing-style.css">
 </head>
 <body>
-    <div class="message">
-        <h1>🎁 More Surprises Coming Soon! 🎁</h1>
-        <p>The journey continues...</p>
+    <div class="container">
+        <!-- Floating stars -->
+        <div class="star star-1">⭐</div>
+        <div class="star star-2">✨</div>
+        <div class="star star-3">⭐</div>
+        <div class="star star-4">✨</div>
+        <div class="star star-5">⭐</div>
+        <div class="star star-6">✨</div>
+        
+        <!-- Main content -->
+        <div class="content">
+            <h1 class="title">הברכה שלי 💝</h1>
+            
+            <div class="blessing-card">
+                <p class="greeting">לבייבי שלי,</p>
+                
+                <p>אז הנה, חלפה לה עוד שנה, שנה שעברנו בה כל כך הרבה..</p>
+                
+                <p>מלחמה עם אירן, טיסה לתאילנד, מכירה של הבית, עוד 2 קורסים under the belt שלך,<br>
+                קניה - כן כן בזכותך!! של דירה שכל כך ייחלנו לה..<br>
+                ועכשיו.. הריון שלישי.</p>
+                
+                <p class="highlight">אפשר להגיד שהגשמנו לא מעט מהחלומות שלנו בשנה הזו, ולגמרי אפשר לטפוח על השכם.</p>
+                
+                <p>ואם כבר מדברים על שכם, זו לגמרי שלך. מי שמוביל, קובע דרך, יודע להרים אותי כשאני למטה או קצת מאבדת כיוון, זה שיודע תמיד להציע את הרעיון הנכון ואת היוזמה הנכונה (אני האקזקיוטרית שלך והשוליה הנצחית) 😊</p>
+                
+                <p class="highlight">אני מודה לשם עליך, על כך שנפגשנו באמצע החיים, בלילה שבו ליוויתי את סבתא שלי, שהיא כל כך יקרה לליבי בדיוק סמסת.. ומאז הכל כבר היסטוריה והתווה את הדרך שלנו הלאה.</p>
+                
+                <p>שנמשיך להיות חברים טובים, לחזק אחד את השניה, להרים כשצריך, לעבוד בעבודת צוות, שיתוף פעולה, לתפקד היטב גם בשגרה וגם במצבי חירום 😉 (חולי, מלחמות ועוד)</p>
+                
+                <p>ולך אני מאחלת, עוד שנה מלאה בהשגת מטרות, פיתוח תחביבים נוספים, שתהיה מסופק מכל דבר שתחפוץ לעשות.</p>
+                
+                <p class="highlight">אתה אבא מדהים, מדהים(!) לאור ובר. לא חושבת שיכולתי לבקש משהו טוב יותר.</p>
+                
+                <p class="signature">אוהבת אותך ❤️</p>
+            </div>
+            
+            <button class="continue-button" onclick="nextPage()">
+                המשך למסע הבא 🎁
+            </button>
+        </div>
     </div>
+
+    <script>
+        function nextPage() {
+            // Navigate to next surprise
+            window.location.href = 'final.html';
+        }
+    </script>
 </body>
 </html>
