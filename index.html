@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Animated balloons -->
+        <div class="balloon balloon-1">🎈</div>
+        <div class="balloon balloon-2">🎈</div>
+        <div class="balloon balloon-3">🎈</div>
+        <div class="balloon balloon-4">🎈</div>
+        <div class="balloon balloon-5">🎈</div>
+        <div class="balloon balloon-6">🎈</div>
+        
+        <!-- Main content -->
+        <div class="content">
+            <h1 class="birthday-text">Happy Birthday</h1>
+            <h2 class="love-text">My Love</h2>
+            <div class="heart">❤️</div>
+            <button class="start-button" onclick="startJourney()">
+                Click Me to Start the Birthday Journey
+            </button>
+        </div>
+        
+        <!-- Confetti effect -->
+        <div class="confetti"></div>
+    </div>
+
+    <script>
+        function startJourney() {
+            // This will navigate to the next page
+            window.location.href = 'journey.html';
+        }
+
+        // Create floating confetti
+        function createConfetti() {
+            const confettiContainer = document.querySelector('.confetti');
+            const colors = ['#ff6b6b', '#ffd93d', '#6bcf7f', '#4d96ff', '#ff85c0', '#c77dff'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti-piece';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.animationDelay = Math.random() * 3 + 's';
+                confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                confettiContainer.appendChild(confetti);
+            }
+        }
+
+        // Initialize confetti on page load
+        window.addEventListener('load', createConfetti);
+    </script>
+</body>
+</html>

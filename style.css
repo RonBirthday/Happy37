@@ -1,0 +1,257 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main content */
+.content {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.birthday-text {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    margin-bottom: 1rem;
+    animation: glow 2s ease-in-out infinite;
+    font-weight: bold;
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+                     0 0 30px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255, 255, 255, 0.8),
+                     0 0 40px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.love-text {
+    font-size: 3rem;
+    color: #ffd93d;
+    text-shadow: 0 0 15px rgba(255, 217, 61, 0.5);
+    margin-bottom: 2rem;
+    font-style: italic;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.heart {
+    font-size: 4rem;
+    margin: 2rem 0;
+    animation: heartbeat 1.5s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+}
+
+/* Button styling */
+.start-button {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-top: 2rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.start-button:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
+}
+
+.start-button:active {
+    transform: scale(0.95);
+}
+
+/* Balloon animations */
+.balloon {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.8;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+}
+
+.balloon-1 {
+    left: 10%;
+    bottom: -100px;
+    animation-delay: 0s;
+    animation-duration: 8s;
+}
+
+.balloon-2 {
+    left: 25%;
+    bottom: -100px;
+    animation-delay: 1s;
+    animation-duration: 7s;
+}
+
+.balloon-3 {
+    left: 45%;
+    bottom: -100px;
+    animation-delay: 2s;
+    animation-duration: 9s;
+}
+
+.balloon-4 {
+    left: 60%;
+    bottom: -100px;
+    animation-delay: 0.5s;
+    animation-duration: 7.5s;
+}
+
+.balloon-5 {
+    left: 75%;
+    bottom: -100px;
+    animation-delay: 1.5s;
+    animation-duration: 8.5s;
+}
+
+.balloon-6 {
+    left: 85%;
+    bottom: -100px;
+    animation-delay: 2.5s;
+    animation-duration: 8s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-200px) translateX(20px);
+    }
+    50% {
+        transform: translateY(-500px) translateX(-20px);
+    }
+    75% {
+        transform: translateY(-800px) translateX(15px);
+    }
+    100% {
+        transform: translateY(-1200px) translateX(0);
+    }
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .birthday-text {
+        font-size: 2.5rem;
+    }
+    
+    .love-text {
+        font-size: 2rem;
+    }
+    
+    .heart {
+        font-size: 3rem;
+    }
+    
+    .start-button {
+        font-size: 1rem;
+        padding: 15px 30px;
+    }
+    
+    .balloon {
+        font-size: 2rem;
+    }
+}
