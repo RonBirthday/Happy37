@@ -3,61 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מתנה מס' 4 🎁</title>
-    <style>
-        body {
-            font-family: 'Assistant', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            padding: 2rem;
-            direction: rtl;
-        }
-        
-        .container {
-            text-align: center;
-            max-width: 800px;
-            background: white;
-            border-radius: 30px;
-            padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-        
-        .title {
-            font-size: 3rem;
-            color: #6a4c93;
-            margin-bottom: 2rem;
-        }
-        
-        .emoji-big {
-            font-size: 5rem;
-            margin: 2rem 0;
-            animation: bounce 2s ease-in-out infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        .message {
-            font-size: 2rem;
-            color: #2c2c2c;
-            line-height: 1.8;
-        }
-    </style>
+    <title>מתנה מס' 4 🎾</title>
+    <link rel="stylesheet" href="gift4-style.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="title">מתנה מס' 4</h1>
-        <div class="emoji-big">🎁</div>
-        <p class="message">
-            המתנה הבאה ממתינה לך...<br>
-            🎉 המשך נהדר! 🎉
-        </p>
+        <!-- Floating tennis emojis -->
+        <div class="tennis tennis-1">🎾</div>
+        <div class="tennis tennis-2">🏸</div>
+        <div class="tennis tennis-3">🎾</div>
+        <div class="tennis tennis-4">🏸</div>
+        <div class="tennis tennis-5">🎾</div>
+        <div class="tennis tennis-6">🏸</div>
+        
+        <!-- Stars -->
+        <div class="star star-1">⭐</div>
+        <div class="star star-2">✨</div>
+        <div class="star star-3">⭐</div>
+        <div class="star star-4">✨</div>
+        
+        <!-- Main content -->
+        <div class="content">
+            <div class="gift-badge">🎾</div>
+            <h1 class="title">מתנה מס' 4</h1>
+            
+            <div class="gift-card">
+                <p class="intro">
+                    היה לך תחביב ישן.. של טניס. 🎾
+                </p>
+                
+                <p class="main-message">
+                    אז יאלה, תחזור לזה קצת!
+                </p>
+                
+                <div class="surprise-box">
+                    <p class="big-reveal">
+                        📅 יום שישי, 15:30 📅
+                    </p>
+                    <p class="location">
+                        📍 בית יהושוע 📍
+                    </p>
+                    <p class="details">
+                        <span class="special">שיעור פרטי עם מאמן תותח<br>
+                        שיחזיר לך קצת את<br>
+                        החדווה ממשחק!</span>
+                    </p>
+                </div>
+                
+                <div class="emoji-row">
+                    <span>🎾</span>
+                    <span>💪</span>
+                    <span>🏆</span>
+                    <span>💪</span>
+                    <span>🎾</span>
+                </div>
+            </div>
+            
+            <button class="ready-button" onclick="startDay()">
+                מוכן להתחיל את היום? 🌟
+            </button>
+        </div>
     </div>
+
+    <script>
+        function startDay() {
+            window.location.href = 'final-surprise.html';
+        }
+    </script>
 </body>
 </html>

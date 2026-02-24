@@ -1,0 +1,430 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Assistant', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main content */
+.content {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+    animation: fadeIn 1.5s ease-in;
+    max-width: 850px;
+    padding: 2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gift badge */
+.gift-badge {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    animation: serve 1.5s ease-out;
+}
+
+@keyframes serve {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) rotate(-180deg);
+    }
+    60% {
+        transform: translateX(20px) rotate(20deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0);
+    }
+}
+
+.title {
+    font-size: 4rem;
+    color: #0fb8ad;
+    text-shadow: 0 4px 20px rgba(15, 184, 173, 0.4);
+    margin-bottom: 2rem;
+    font-weight: bold;
+    animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gift card */
+.gift-card {
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 30px;
+    padding: 3rem;
+    margin: 2rem auto;
+    box-shadow: 0 20px 60px rgba(15, 184, 173, 0.3);
+    animation: cardZoom 1s ease-out 0.3s backwards;
+}
+
+@keyframes cardZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.intro {
+    font-size: 2rem;
+    color: #0fb8ad;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.main-message {
+    font-size: 2.2rem;
+    color: #2c2c2c;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* Surprise box */
+.surprise-box {
+    background: linear-gradient(135deg, #0fb8ad 0%, #1fc8db 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 10px 30px rgba(15, 184, 173, 0.4);
+    animation: popIn 0.8s ease-out 1.5s backwards;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) rotate(-10deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+.big-reveal {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.location {
+    font-size: 2.2rem;
+    color: #ffffcb;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details {
+    font-size: 1.8rem;
+    color: white;
+    line-height: 1.8;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+}
+
+.special {
+    font-weight: bold;
+    font-size: 2rem;
+    display: inline-block;
+    animation: swing 2s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
+/* Emoji row */
+.emoji-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+.emoji-row span {
+    display: inline-block;
+    animation: pump 1s ease-in-out infinite;
+}
+
+.emoji-row span:nth-child(1) { animation-delay: 0s; }
+.emoji-row span:nth-child(2) { animation-delay: 0.2s; }
+.emoji-row span:nth-child(3) { animation-delay: 0.4s; }
+.emoji-row span:nth-child(4) { animation-delay: 0.6s; }
+.emoji-row span:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes pump {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Floating tennis */
+.tennis {
+    position: fixed;
+    font-size: 3rem;
+    animation: floatTennis 5s ease-in-out infinite;
+    opacity: 0.7;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+.tennis-1 {
+    top: 10%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.tennis-2 {
+    top: 20%;
+    left: 12%;
+    animation-delay: 1s;
+}
+
+.tennis-3 {
+    top: 50%;
+    right: 8%;
+    animation-delay: 2s;
+}
+
+.tennis-4 {
+    top: 60%;
+    left: 10%;
+    animation-delay: 1.5s;
+}
+
+.tennis-5 {
+    bottom: 15%;
+    right: 15%;
+    animation-delay: 2.5s;
+}
+
+.tennis-6 {
+    bottom: 20%;
+    left: 12%;
+    animation-delay: 3s;
+}
+
+@keyframes floatTennis {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-30px) rotate(90deg);
+    }
+    50% {
+        transform: translateY(0) rotate(180deg);
+    }
+    75% {
+        transform: translateY(-25px) rotate(270deg);
+    }
+}
+
+/* Stars */
+.star {
+    position: fixed;
+    font-size: 2.5rem;
+    animation: twinkle 3s ease-in-out infinite;
+    opacity: 0;
+}
+
+.star-1 {
+    top: 25%;
+    right: 25%;
+    animation-delay: 0s;
+}
+
+.star-2 {
+    top: 45%;
+    left: 20%;
+    animation-delay: 0.8s;
+}
+
+.star-3 {
+    bottom: 30%;
+    right: 30%;
+    animation-delay: 1.6s;
+}
+
+.star-4 {
+    bottom: 35%;
+    left: 28%;
+    animation-delay: 2.4s;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3) rotate(180deg);
+    }
+}
+
+/* Ready button */
+.ready-button {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    border: none;
+    padding: 25px 50px;
+    font-size: 1.7rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 15px 40px rgba(240, 147, 251, 0.5);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-top: 2rem;
+    animation: pulseButton 2s ease-in-out infinite;
+    font-family: 'Assistant', 'Segoe UI', sans-serif;
+}
+
+@keyframes pulseButton {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 15px 40px rgba(240, 147, 251, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 20px 50px rgba(240, 147, 251, 0.7);
+    }
+}
+
+.ready-button:hover {
+    transform: scale(1.15) rotate(2deg);
+    box-shadow: 0 20px 60px rgba(240, 147, 251, 0.8);
+}
+
+.ready-button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .gift-badge {
+        font-size: 3.5rem;
+    }
+    
+    .gift-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .intro {
+        font-size: 1.5rem;
+    }
+    
+    .main-message {
+        font-size: 1.6rem;
+    }
+    
+    .big-reveal {
+        font-size: 2rem;
+    }
+    
+    .location {
+        font-size: 1.8rem;
+    }
+    
+    .details {
+        font-size: 1.4rem;
+    }
+    
+    .special {
+        font-size: 1.6rem;
+    }
+    
+    .emoji-row {
+        font-size: 2rem;
+        gap: 1rem;
+    }
+    
+    .ready-button {
+        font-size: 1.3rem;
+        padding: 20px 40px;
+    }
+    
+    .tennis {
+        font-size: 2rem;
+    }
+    
+    .star {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .intro {
+        font-size: 1.3rem;
+    }
+    
+    .main-message {
+        font-size: 1.4rem;
+    }
+}
